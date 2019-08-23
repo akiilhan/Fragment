@@ -17,16 +17,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun addFragmentA(view: View) {
+    fun addFragmentA(v: View) {
         var fragmentA=FragmentA() // -> Önce nesne tanımlıyoruz.
         var transaction= manager.beginTransaction()//-> fragment işlemi başlatıyoruz.
-        transaction.add(R.id.container,fragmentA,"Fragment A") //->
+        transaction.add(R.id.container,fragmentA,"FragA") //->
         transaction.commit()
     }
-    fun addFragmentB(view:View){
+    fun addFragmentB(View:View){
         var fragmentB = FragmentB()
         var transaction=manager.beginTransaction()
-        transaction.add(R.id.container,fragmentB,"frangment b")
+        transaction.add(R.id.container,fragmentB,"fragB")
+        transaction.commit()
+    }
+    fun removeFragmentA(view:View){
+
+          var fragmentA= manager.findFragmentByTag("FragA") as FragmentA
+        var transaction=manager.beginTransaction()
+        transaction.remove(fragmentA)
         transaction.commit()
 
     }
