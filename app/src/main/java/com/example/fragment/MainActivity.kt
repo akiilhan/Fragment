@@ -3,6 +3,7 @@ package com.example.fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -29,12 +30,39 @@ class MainActivity : AppCompatActivity() {
         transaction.add(R.id.container,fragmentB,"fragB")
         transaction.commit()
     }
-    fun removeFragmentA(view:View){
+    /**fun removeFragmentA(view:View){
 
           var fragmentA= manager.findFragmentByTag("FragA") as FragmentA
         var transaction=manager.beginTransaction()
-        transaction.remove(fragmentA)
-        transaction.commit()
+        if (fragmentA!=null){
+            transaction.remove(fragmentA)
+            transaction.commit()
+        }
+        else {
+            Toast.makeText(this,"Fragment A bulunamadı",Toast.LENGTH_LONG).show()
+        }
+    }*/
+    fun removeFragmentA(v: View) {
+
+        val fragmentA = manager.findFragmentByTag("FragA") as FragmentA?
+        val transaction = manager.beginTransaction()
+        if (fragmentA != null) {
+            transaction.remove(fragmentA)
+            transaction.commit()
+        } else {
+            Toast.makeText(this, "Fragment A bulunamadı", Toast.LENGTH_LONG).show()
+        }
+
+    }
+    fun removeFragmentB(view:View){
+
+        var fragmentB= manager.findFragmentByTag("fragB") as FragmentB?
+        var transaction=manager.beginTransaction()
+        if (fragmentB!=null){
+            transaction.remove(fragmentB)
+            transaction.commit()
+        } else Toast.makeText(this,"Fragment B bulunamadı",Toast.LENGTH_LONG).show()
+
 
     }
 

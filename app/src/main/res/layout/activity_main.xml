@@ -25,9 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ÇIKAR A"
-            android:onClick="removeFragmentA"
-
-            />
+            android:onClick="removeFragmentA"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -40,8 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ÇIKAR B"
-
-            />
+            android:onClick="removeFragmentB" />
 
 
     </LinearLayout>
