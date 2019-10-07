@@ -18,37 +18,107 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ekle A"
             android:onClick="addFragmentA"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ÇIKAR A"
-            android:onClick="removeFragmentA"/>
+            android:text="Ekle A" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EKLE B"
+            android:onClick="removeFragmentA"
+            android:text="ÇIKAR A" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="addFragmentB"
-            />
+            android:text="EKLE B" />
+
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ÇIKAR B"
-            android:onClick="removeFragmentB" />
+            android:onClick="removeFragmentB"
+            android:text="ÇIKAR B" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="replaceByFragmentB"
+            android:text="B ILE DEGISTIR" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="replaceByFragmentA"
+            android:text="A ILE DEGISTIR" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="attachFragmentA"
+            android:text="ATTACH A" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="detachFragmentA"
+            android:text="DETACH A" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showFragmentA"
+            android:text="SHOW A" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="hideFragmentA"
+            android:text="HIDE A" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backButton"
+            android:text="BACK BUTONU"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="popAddInclusive"
+            android:text="POP AND INCLUSIVE"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="popAddB"
+            android:text="BPOP ADD B"/>
+
+
 
 
     </LinearLayout>
 
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </FrameLayout>
+        android:layout_height="match_parent"></FrameLayout>
 
 
 </LinearLayout>
